@@ -1,0 +1,20 @@
+.circle {
+    height: auto;
+    width: 95%;
+    margin: auto;
+    border-radius: 50%;
+    display: block;
+    max-width: 500px;
+    border: 2px black solid;
+}
+
+.strainContainer {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.imageContainer {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}

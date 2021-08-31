@@ -1,0 +1,19 @@
+.headerText {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.2em;
+  text-align: left;
+  margin: auto;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.text {
+  font-family: "Nunito", sans-serif;
+  font-size: 1em;
+  text-align: left;
+  margin: auto;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+

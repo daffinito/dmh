@@ -1,0 +1,41 @@
+.image {
+  height: 350px;
+  width: 350px;
+  margin: auto;
+  display: block;
+  max-width: 350px;
+  border: 1px solid black;
+  border-radius: 75%;
+}
+
+.spinner {
+  height: 350px;
+  width: 350px;
+  margin: auto;
+  display: block;
+  max-width: 350px;
+  border: 1px solid black;
+  text-align: center;
+  font-size: 2.5em;
+}
+
+.logoContainer {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.imageContainer {
+ 
+  margin: 25px auto;
+  display: block;
+}
+
+.smallText {
+  font-family: "Nunito", sans-serif;
+  color: black;
+  font-size: 0.8em;
+  text-align: center;
+  margin: auto;
+  padding: 5px 0 5px 0;
+}

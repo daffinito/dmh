@@ -1,0 +1,38 @@
+.selectionContainer {
+    text-align: center;
+    font-size: 12px;
+    cursor: pointer;
+    height: 60px;
+    display: inline-block;
+    transform: perspective(1px) translateZ(0);
+    transition: all 0.15s;
+    width: 100%;
+}
+
+.body.hasHover .selectionContainer:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.selectionContainer:active {
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+.dial {
+    margin: auto !important;
+    display: inline-block !important;
+    padding-top: 5px;
+}
+
+.selectionDesc {
+    color: rgba(255, 127, 0, 1);
+    position: absolute;
+    transform: translate(-50%,0);
+    left: 50%;
+    bottom: 0;
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}

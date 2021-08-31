@@ -1,0 +1,71 @@
+.btnWrapper {
+	padding: 20px 1px 10px 1px;
+	display: flex;
+	justify-content: center;
+}
+
+.dmhbtn {
+	display: inline-block;
+  	vertical-align: middle;
+    width: 150px;
+    transition: all 0.15s;
+	box-shadow: 0px 5px 7px -7px #000000;
+	background-color: rgba(0,0,0,0);
+	border-radius:4px;
+	cursor:pointer;
+	margin: auto;
+	font-size:13px;
+	font-weight:bold;
+	padding:6px 12px;
+	text-decoration:none;
+	-webkit-transform: perspective(1px) translateZ(0);
+  	transform: perspective(1px) translateZ(0);
+}
+.large {
+	font-size:18px;
+	width: 300px;
+	padding: 15px 25px;
+	margin: 7px 7px;
+}
+
+body.hasHover .dmhbtn:hover {
+	-webkit-transform: scale(1.2);
+  	transform: scale(1.2);
+}
+
+body.hasHover .dmhbtn.orange:hover {
+    color: rgba(255, 127, 0, 1);
+	border-color: rgba(255, 127, 0, 1);
+}
+
+body.hasHover .dmhbtn.green:hover {
+    color: #66FF00;
+	border-color: #66FF00;
+}
+
+body.hasHover .dmhbtn.red:hover {
+    color: #FF3400;
+	border-color: #FF3400;
+}
+
+.dmhbtn:active {
+	position:relative;
+	top:1px;
+	-webkit-transform: scale(1.2);
+	transform: scale(1.2);
+}
+
+.dmhbtn.orange:active {
+    color: rgba(255, 127, 0, 1);
+	border-color: rgba(255, 127, 0, 1);
+}
+
+.dmhbtn.green:active {
+    color: #66FF00;
+	border-color: #66FF00;
+}
+
+.dmhbtn.red:active {
+	color: #FF3400;
+	border-color: #FF3400;
+}

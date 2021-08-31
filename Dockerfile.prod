@@ -1,0 +1,57 @@
+FROM node:10
+
+ADD ./client/yarn.lock /yarn.lock
+ADD ./client/package.json /package.json
+
+ENV NODE_PATH=/node_modules
+ENV PATH=$PATH:/node_modules/.bin
+RUN yarn install --frozen-lockfile --no-cache --production
+RUN yarn cache clean
+
+WORKDIR /app/client
+ADD ./client /app/client
+
+RUN yarn build
+
+FROM node:10
+
+ADD yarn.lock /yarn.lock
+ADD package.json /package.json
+
+ENV NODE_PATH=/node_modules
+ENV PATH=$PATH:/node_modules/.bin
+RUN yarn install --frozen-lockfile --no-cache --production
+RUN yarn cache clean
+
+COPY --from=0 /app/client/build /app/client/build
+
+WORKDIR /app
+ADD . /app
+
+EXPOSE 5000
+
+#TODO: THIS SHOULD BE IN THE CONTAINER DEFINITION
+ENV NODE_ENV=production
+ENV AWS_ACCESS_KEY_ID=REMOVED
+ENV AWS_SECRET_ACCESS_KEY=REMOVED
+ENV AWS_S3_BUCKET=dialmyhigh
+ENV AWS_MEMCACHE_ENDPOINT=REMOVED.usw2.cache.amazonaws.com:11211
+ENV AWS_REGION=us-west-2
+ENV BING_API_KEY=REMOVED
+ENV TC_SECRET_WORD=REMOVED
+ENV GOOGLE_API_KEY=REMOVED
+ENV IPSTACK_API_KEY=REMOVED
+ENV NEW_RELIC_LICENSE_KEY=REMOVED
+ENV NEW_RELIC_APP_NAME=DialMyHigh-Prod
+ENV DB_HOST=REMOVED.us-west-2.rds.amazonaws.com
+ENV DB_PORT=REMOVED
+ENV DB_USER=REMOVED
+ENV DB_PASSWORD=REMOVED
+ENV DB_NAME=REMOVED
+ENV NEW_RELIC_GRAPHQL_API_KEY=REMOVED
+ENV NEW_RELIC_ACCOUNT_ID=REMOVED
+
+CMD yarn start
+
+
+

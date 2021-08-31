@@ -1,0 +1,19 @@
+.modal {
+  font-family: "Nunito", sans-serif;
+  font-size: 1em;
+  color: black;
+}
+
+.modalContent {
+  background-color: #a9b0b5;
+}
+
+.wrap {
+  max-width: 400px;
+  margin: auto;
+}
+
+.buttonPadding {
+  padding: 5px 10px;
+  display: inline-block;
+}

@@ -1,0 +1,12 @@
+.dial {
+    margin: auto !important;
+    display: block !important;
+}
+
+.dialContainer {
+    height: 95%;
+    width: 100%;
+    position: relative;
+    padding-top: 5px;
+    touch-action: none; 
+}

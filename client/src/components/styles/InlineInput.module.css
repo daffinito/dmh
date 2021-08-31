@@ -1,0 +1,106 @@
+.text {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.2em;
+  text-align: left;
+  margin: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  padding-top: 32px;
+}
+.editIcon {
+  padding: 0 10px;
+  cursor: pointer;
+}
+.inputIcons {
+  padding: 0 10px;
+  position: relative;
+  transform: translate(0,-50%);
+  top: 50%;
+  cursor: pointer;
+}
+
+.wrap {
+  padding: 0 0 15px 0;
+  width: 100%;
+  text-align: left;
+}
+
+/*
+.input {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  max-width: 400px;
+}
+.input .label {
+  position: absolute;
+  top: 16px;
+  left: 0;
+  font-size: 16px;
+  color: #002211;
+  font-weight: 500;
+  transform-origin: 0 0;
+  transition: all 0.2s ease;
+}
+.input .border {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: #004422;
+  transform: scaleX(0);
+  transform-origin: 0 0;
+  transition: all 0.15s ease;
+}
+.input input {
+  -webkit-appearance: none;
+  width: 100%;
+  border: 0;
+  font-family: inherit;
+  padding: 12px 0;
+  height: 48px;
+  font-size: 16px;
+  font-weight: 500;
+  border-bottom: 2px solid #002211;
+  background: none;
+  border-radius: 0;
+  color: #223254;
+  transition: all 0.15s ease;
+}
+
+.input input:hover {
+  background: rgba(34, 50, 84, 0.03);
+}
+
+.input input:not(:placeholder-shown) + span,
+.input input:-webkit-autofill + span {
+  color: #5a667f;
+  transform: translateY(-26px) scale(0.75);
+}
+
+.input input:focus {
+  background: none;
+  outline: none;
+}
+.input input:focus + span {
+  color: #004422;
+  transform: translateY(-26px) scale(0.75);
+}
+.input input:focus + span + .border {
+  transform: scaleX(1);
+}
+
+.invalid {
+  color: red !important;
+}
+
+.invalid input {
+  border-bottom: 2px solid red;
+}
+
+.input .border.invalid {
+  background: red !important;
+}
+*/
+

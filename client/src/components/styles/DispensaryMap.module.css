@@ -1,0 +1,83 @@
+.mapContainer {
+  position: relative;
+  text-align: center;
+  font-size: 1em;
+  width: 100%;
+  top: 50%;
+  padding-top: 15px;
+  transform: translateY(-50%);
+}
+
+.strainName {
+  font-weight: bold;
+  font-size: 1em;
+  color: white;
+}
+
+.dispensaryLink > a {
+  color: white;
+}
+
+.dispensaryName {
+  color: white;
+  font-weight: bold;
+}
+
+.dispensaryLink {
+  font-size: 1em;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.useLocationLink {
+  font-size: 1em;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.locationErrorText {
+  font-size: 1em;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.useLocationLinkContainer {
+  transition: all 0.15s;
+  padding-top: 15px;
+}
+
+.useLocationLink:hover {
+  text-decoration: underline;
+  color: rgba(255, 127, 0, 1);
+}
+
+.useLocationLinkContainer:hover {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.image {
+  margin: auto;
+  display: block;
+  max-width: 100px;
+  border: 2px solid black;
+}
+
+.imageContainer {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+.textContainer {
+  position: relative;
+  text-align: left;
+  font-size: 1em;
+  width: 100%;
+  top: 50%;
+  padding-left: 15px;
+  transform: translateY(-50%);
+}

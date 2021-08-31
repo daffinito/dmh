@@ -1,0 +1,24 @@
+.text {
+  font-family: "Nunito", sans-serif;
+  font-size: 1em;
+  text-align: left;
+  margin: auto;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.helperText {
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+  font-size: .8em;
+  margin: auto;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.addressBlock {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  padding-top: 25px;
+}

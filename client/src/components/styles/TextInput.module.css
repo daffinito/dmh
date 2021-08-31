@@ -1,0 +1,10 @@
+.wrap {
+  padding: 15px 0 15px 0;
+  width: 100%;
+  text-align: left;
+}
+
+.input {
+  width: 100%;
+  max-width: 400px;
+}

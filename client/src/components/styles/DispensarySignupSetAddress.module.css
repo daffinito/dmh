@@ -1,0 +1,17 @@
+.signupText {
+    font-family: "Nunito", sans-serif;
+    color: black;
+    font-size: 1.3em;
+    text-align: center;
+    margin: auto;
+    padding: 15px 0 15px 0;
+  }
+  
+  .background {
+    background-color: #A9B0B5;
+    width: 100%;
+    max-width: 400px;
+    padding: 0 15px;
+    border: 1px solid #2c3e50;
+  }
+  

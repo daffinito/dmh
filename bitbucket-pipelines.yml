@@ -1,0 +1,55 @@
+# This is a sample build configuration for Docker.
+# Check our guides at https://confluence.atlassian.com/x/O1toN for more examples.
+# Only use spaces to indent your .yml configuration.
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+image: atlassian/pipelines-awscli
+
+pipelines:
+  branches:
+    master:
+      - step:
+          name: Deploy to production
+          deployment: production
+          services:
+            - docker
+          script:
+            # env vars
+            - export IMAGE_NAME=dmh:latest
+            - export AWS_REGISTRY_URL=REMOVED.dkr.ecr.us-west-2.amazonaws.com
+            - export AWS_DEFAULT_REGION=us-west-2
+
+            # login
+            - eval $(aws ecr get-login --no-include-email --region us-west-2)
+
+            # build image
+            - docker build -t $IMAGE_NAME . -f Dockerfile.prod
+            - docker tag $IMAGE_NAME $AWS_REGISTRY_URL/$IMAGE_NAME
+            - docker push $AWS_REGISTRY_URL/$IMAGE_NAME
+
+            # force aws to update
+            - aws ecs update-service --force-new-deployment --cluster $AWS_ECS_CLUSTER_NAME --service $AWS_ECS_SERVICE_NAME
+    dev:
+      - step:
+          name: Deploy to staging
+          deployment: production
+          services:
+            - docker
+          script:
+            # env vars
+            - export IMAGE_NAME=dmh-staging:latest
+            - export AWS_REGISTRY_URL=REMOVED.dkr.ecr.us-west-2.amazonaws.com
+            - export AWS_DEFAULT_REGION=us-west-2
+            - export AWS_ECS_CLUSTER_NAME_STAGING=dmh-staging-cluster
+            - export AWS_ECS_SERVICE_NAME_STAGING=dmh-staging-service
+
+            # login
+            - eval $(aws ecr get-login --no-include-email --region us-west-2)
+
+            # build image
+            - docker build -t $IMAGE_NAME . -f Dockerfile.staging
+            - docker tag $IMAGE_NAME $AWS_REGISTRY_URL/$IMAGE_NAME
+            - docker push $AWS_REGISTRY_URL/$IMAGE_NAME
+
+            # force aws to update
+            - aws ecs update-service --force-new-deployment --cluster $AWS_ECS_CLUSTER_NAME_STAGING --service $AWS_ECS_SERVICE_NAME_STAGING

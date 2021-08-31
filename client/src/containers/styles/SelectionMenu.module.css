@@ -1,0 +1,7 @@
+.selectionMenu {
+    height: 60px;
+    width: 100%;
+    top: 64px;
+    position: absolute;
+    background-color: #002211;
+}

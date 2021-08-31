@@ -1,0 +1,14 @@
+.footertext {
+    text-align: center;
+    font-size: 12px;
+    padding-bottom: 10px;
+    padding-top: 15px;
+    width: 100%;
+    display: inline-block;
+    
+}
+
+.footertext>a {
+    color: white;
+
+}

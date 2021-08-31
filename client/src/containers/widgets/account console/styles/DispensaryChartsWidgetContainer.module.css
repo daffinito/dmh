@@ -1,0 +1,49 @@
+.dial {
+  margin: auto !important;
+  display: block !important;
+}
+
+.dialContainer {
+  height: 95%;
+  width: 100%;
+  position: relative;
+  touch-action: none;
+}
+
+.chartSelectionCenterText {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.2em;
+  text-align: center;
+  margin: auto;
+}
+
+.chartSelectionRightText {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.2em;
+  text-align: right;
+  margin: auto;
+}
+
+.chartSelectionLeftText {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.2em;
+  text-align: left;
+  margin: auto;
+}
+
+.image {
+  height: auto;
+  width: 95%;
+  margin: auto;
+  display: block;
+  max-width: 128px;
+}
+
+.chartContainer {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.imageContainer {
+}
